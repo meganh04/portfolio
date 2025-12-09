@@ -4,184 +4,171 @@
 }
 
 /* Page background */
-.bg-gray-50 {
+.page-bg {
   background-color: #f9fafb;
 }
 
 /* Header / hero */
 header {
-  background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+  background: darkred;
   color: #fff;
   padding: 5rem 0;
 }
-.text-white {
-  color: #fff;
-}
 
-/* Container layout (similar to Tailwind .container .mx-auto .px-4 .max-w-4xl) */
 .container {
   max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Flex utilities */
-.flex {
+/* Hero */
+.site-hero {
+  background: darkred;
+  color: #fff;
+  padding: 5rem 0;
+}
+.hero-inner {
   display: flex;
-}
-.items-center {
   align-items: center;
-}
-.gap-8 {
   gap: 2rem;
 }
-
-/* Image */
-.w-32 {
+.avatar {
   width: 8rem;
-}
-.h-32 {
   height: 8rem;
-}
-.rounded-full {
   border-radius: 9999px;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.12);
 }
-.border-4 {
-  border-width: 4px;
-}
-.border-white {
-  border-color: #fff;
-}
-.shadow-lg {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.12);
+.site-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
 }
 
-/* Typography */
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 1.05;
+/* Main content */
+.main-content {
+  padding: 3rem 0;
 }
-.text-2xl {
+.section {
+  margin-bottom: 3rem;
+}
+.section-title {
   font-size: 1.5rem;
-}
-.text-xl {
-  font-size: 1.25rem;
-}
-.font-bold {
   font-weight: 700;
-}
-.font-semibold {
-  font-weight: 600;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-.mb-6 {
   margin-bottom: 1.5rem;
 }
 
-/* Main spacing */
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-.p-6 {
-  padding: 1.5rem;
-}
-
-/* Grid */
-.grid {
+/* Projects grid */
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1.5rem;
-}
-.gap-6 {
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 @media (min-width: 768px) {
-  .md\:grid-cols-2 {
+  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .md\:grid-cols-3 {
+}
+
+/* ✅ Project card — outer dotted frame (your updated code) */
+.project-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  transition: box-shadow 180ms ease;
+
+  border: none;
+  outline: 5px dotted #99ad27;
+  outline-offset: 2px;
+}
+
+.project-card:hover {
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+.project-link {
+  color: maroon;
+  text-decoration: none;
+}
+.project-link:hover {
+  color: #99ad27;
+}
+.project-desc {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ✅ Stars (your updated code) */
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-star {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: currentColor;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .stats-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-/* Cards */
-.bg-white {
+.stat-card {
   background: #fff;
-}
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-.shadow-md {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
-}
-.transition-shadow {
-  transition: box-shadow 180ms ease;
-}
-.bg-white:hover {
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* Links and small elements */
-.text-purple-600 {
-  color: #7c3aed;
-}
-a.text-purple-600:hover {
-  color: #5b21d2;
-}
-.hover\:text-purple-800:hover {
-  color: #5b21d2;
-}
-.text-gray-600 {
-  color: #4b5563;
-}
-.text-sm {
-  font-size: 0.875rem;
-}
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-.bg-gray-100 {
-  background: #f3f4f6;
-}
-.rounded {
-  border-radius: 0.25rem;
-}
-
-/* Stats box */
-.text-center {
+  border-radius: .5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  padding: 1.5rem;
   text-align: center;
+ border: none;
+  outline: 5px dotted #99ad27;
+  outline-offset: 2px;
 }
-.text-purple-600 {
-  color: #7c3aed;
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: maroon;
+}
+.stat-label {
+  color: #4b5563;
 }
 
 /* Footer */
-footer {
+.site-footer {
+  text-align: center;
   margin-top: 2rem;
+  color: #4b5563;
+}
+.footer-link {
+  color: maroon;
+}
+.footer-link:hover {
+  text-decoration: underline;
 }
 
-/* Small adjustments for lists/icons */
-.flex.items-center.gap-1 {
-  gap: 0.25rem;
-  align-items: center;
-  display: inline-flex;
-}
-
-/* Make sure links inside cards look clickable */
-.bg-white a {
-  text-decoration: none;
+.icon-github {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  display: inline-block;
 }
