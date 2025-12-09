@@ -45,6 +45,11 @@ header {
   margin-bottom: .5rem;
 }
 
+.site-description {
+  font-size: 1.25rem;
+  display: inline-flex;
+}
+
 /* Main content */
 .main-content {
   padding: 3rem 0;
@@ -170,5 +175,27 @@ header {
   width: 16px;
   height: 16px;
   margin-right: 4px;
+  display: inline-block;
+}
+
+.social-icons {
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: maroon;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: #99ad27;
+}
+
+.icon-social {
+  width: 24px;
+  height: 24px;
   display: inline-block;
 }
