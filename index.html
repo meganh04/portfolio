@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Megan's Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body class="page-bg">
     <header class="site-hero">
@@ -16,7 +17,16 @@
             class="avatar"
           />
           <div>
-            <h1 class="site-title">@Meganh04</h1>
+            <h1 class="site-title">
+              <a
+                href="https://github.com/meganh04"
+                class="profile-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @Meganh04
+              </a>
+            </h1>
             <h2 class="site-description">
               Megan's Web Developer Portfolio! 
               Crea 330 - Interdisciplinary Web Design
@@ -35,7 +45,7 @@
             <h3 class="project-title">
               <a
                 href="https://meganh04.github.io/lyrics-search-app/"
-                class="project-link"
+                class="profile-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -321,5 +331,22 @@
         </div>
       </footer>
     </main>
+    <script>
+document.addEventListener("mousemove", function (e) {
+  const dot = document.createElement("div");
+  dot.className = "trail";
+  // Use clientX/clientY so it matches viewport fixed position
+  dot.style.left = e.clientX + "px";
+  dot.style.top = e.clientY + "px";
+  document.body.appendChild(dot);
+
+  // Let the browser paint the element, then trigger fade
+  requestAnimationFrame(() => requestAnimationFrame(() => dot.classList.add("fade")));
+
+  // Remove element after animation finishes (match ~380ms + small buffer)
+  setTimeout(() => dot.remove(), 460);
+});
+</script>
+
   </body>
 </html>
