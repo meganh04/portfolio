@@ -43,6 +43,7 @@ header {
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: .5rem;
+  color: #99ad27
 }
 
 .site-description {
@@ -61,6 +62,7 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  color: maroon;
 }
 
 /* Projects grid */
@@ -110,7 +112,7 @@ header {
   color: #99ad27;
 }
 .project-desc {
-  color: #4b5563;
+  color: black;
   margin-bottom: 1rem;
 }
 .project-meta {
@@ -160,14 +162,14 @@ header {
   color: maroon;
 }
 .stat-label {
-  color: #4b5563;
+  color: black;
 }
 
 /* Footer */
 .site-footer {
   text-align: center;
   margin-top: 2rem;
-  color: #4b5563;
+  color: black;
 }
 .footer-link {
   color: maroon;
@@ -229,4 +231,30 @@ header {
 
   background: currentColor;
   filter: drop-shadow(0 0 10px currentColor);
+}
+
+/* Hover effect: background + outline swap */
+.project-card:hover {
+  background: #99ad27;          /* card turns green-gold */
+  outline-color: maroon;        /* dotted border turns maroon */
+  color: white;                 /* text stays readable */
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+/* Ensure title and description change color on hover */
+.project-card:hover .project-title 
+.project-card:hover .project-desc {
+  color: white;
+}
+.project-card:hover .project-desc,
+.project-card:hover .project-meta,
+.project-card:hover .stars,
+.project-card:hover .icon-star {
+  color: white;
+  fill: white;
+}
+
+/* Override link style so it stays visible */
+.project-card:hover .project-link {
+  color: maroon;
 }
